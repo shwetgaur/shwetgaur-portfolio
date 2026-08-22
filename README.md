@@ -2,6 +2,8 @@
 
 Personal portfolio site: **AI/ML engineer**, live demos, run-card project layout.
 
+**Live site:** [shwetgaur-portfolio.vercel.app](https://shwetgaur-portfolio.vercel.app)
+
 **Repo:** [github.com/shwetgaur/shwetgaur-portfolio](https://github.com/shwetgaur/shwetgaur-portfolio)
 
 ## Stack
@@ -20,17 +22,13 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000)
 
-## Deploy to Vercel (one click)
+## Deploy (Vercel)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fshwetgaur%2Fshwetgaur-portfolio&project-name=shwetgaur-portfolio&repository-name=shwetgaur-portfolio)
+Hosted on Vercel. Redeploy after changes:
 
-Or import manually:
-
-1. Go to [vercel.com/new](https://vercel.com/new)
-2. Import `shwetgaur/shwetgaur-portfolio`
-3. Deploy — zero config
-
-After deploy, update `metadataBase` in `src/app/layout.tsx` to your live URL (e.g. `https://your-name.vercel.app`).
+```bash
+npx vercel --prod
+```
 
 ## Customize
 
