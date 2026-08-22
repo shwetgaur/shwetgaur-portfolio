@@ -19,19 +19,11 @@ export default function Icon() {
           fontFamily: "system-ui, sans-serif",
         }}
       >
-        <div
-          style={{
-            fontSize: 28,
-            letterSpacing: 6,
-            textTransform: "uppercase",
-            color: "#3d8bfd",
-            marginBottom: 24,
-          }}
-        >
-          Ship Log
-        </div>
         <div style={{ fontSize: 72, fontWeight: 600, marginBottom: 16 }}>
           Shwet Gaur
+        </div>
+        <div style={{ fontSize: 28, color: "#3d8bfd", marginBottom: 16 }}>
+          AI/ML Engineer
         </div>
         <div style={{ fontSize: 32, color: "#8b9298", maxWidth: 900 }}>
           AI/ML engineer — LangGraph agents, RAG, production APIs

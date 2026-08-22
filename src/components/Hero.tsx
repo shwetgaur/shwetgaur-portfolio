@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowDown, ExternalLink, FileDown } from "lucide-react";
 import { GitHubIcon } from "@/components/BrandIcons";
-import { liveStrip, pipelineSteps, site } from "@/lib/data";
+import { liveStrip, site } from "@/lib/data";
 
 export function Hero() {
   return (
@@ -11,20 +11,11 @@ export function Hero() {
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-accent/5 via-transparent to-transparent" />
 
       <div className="relative mx-auto max-w-5xl px-4 sm:px-6">
-        <motion.p
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
-          className="font-mono text-xs uppercase tracking-widest text-accent"
-        >
-          Ship Log · AI Systems Portfolio
-        </motion.p>
-
         <motion.h1
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.45, delay: 0.05 }}
-          className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl"
+          transition={{ duration: 0.45 }}
+          className="text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl"
         >
           {site.name}
         </motion.h1>
@@ -98,25 +89,6 @@ export function Hero() {
               <FileDown size={16} />
             </a>
           )}
-        </motion.div>
-
-        {/* Pipeline */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.35 }}
-          className="mt-12 hidden sm:flex items-center gap-0 max-w-lg"
-        >
-          {pipelineSteps.map((step, i) => (
-            <div key={step} className="flex items-center flex-1 min-w-0">
-              <span className="font-mono text-[10px] uppercase tracking-wider text-muted whitespace-nowrap">
-                {step}
-              </span>
-              {i < pipelineSteps.length - 1 && (
-                <span className="mx-2 h-px flex-1 bg-border" aria-hidden />
-              )}
-            </div>
-          ))}
         </motion.div>
 
         {/* Live strip */}

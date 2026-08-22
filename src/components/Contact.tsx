@@ -1,34 +1,11 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail } from "lucide-react";
 import { GitHubIcon, LinkedInIcon } from "@/components/BrandIcons";
 import { site } from "@/lib/data";
 
-const terminalLines = [
-  "> parsing portfolio.json ... OK",
-  "> loading projects ... 4 found",
-  "> checking live endpoints ... 2 LIVE",
-  "> status: ALL SYSTEMS GO",
-];
-
 export function Contact() {
-  const [terminalOpen, setTerminalOpen] = useState(false);
-  const [lineIndex, setLineIndex] = useState(0);
-
-  const runTerminal = () => {
-    if (terminalOpen) return;
-    setTerminalOpen(true);
-    setLineIndex(0);
-    let i = 0;
-    const interval = setInterval(() => {
-      i += 1;
-      setLineIndex(i);
-      if (i >= terminalLines.length) clearInterval(interval);
-    }, 400);
-  };
-
   return (
     <section id="contact" className="border-t border-border py-16 sm:py-24">
       <div className="mx-auto max-w-5xl px-4 sm:px-6">
@@ -75,25 +52,6 @@ export function Contact() {
               GitHub
             </a>
           </div>
-
-          <button
-            type="button"
-            onClick={runTerminal}
-            className="mt-10 font-mono text-xs text-muted hover:text-accent transition-colors"
-          >
-            $ run status-check
-          </button>
-
-          {terminalOpen && (
-            <div className="mt-3 max-w-md rounded-lg border border-border bg-black/40 p-4 font-mono text-xs text-live">
-              {terminalLines.slice(0, lineIndex).map((line) => (
-                <div key={line}>{line}</div>
-              ))}
-              {lineIndex < terminalLines.length && (
-                <span className="animate-pulse">▌</span>
-              )}
-            </div>
-          )}
         </motion.div>
       </div>
     </section>

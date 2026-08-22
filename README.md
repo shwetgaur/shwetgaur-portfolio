@@ -1,4 +1,4 @@
-# Ship Log — Shwet Gaur Portfolio
+# Shwet Gaur — Portfolio
 
 Personal portfolio site: **AI/ML engineer**, live demos, run-card project layout.
 

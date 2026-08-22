@@ -19,10 +19,9 @@ export function Header() {
       <div className="mx-auto flex h-14 max-w-5xl items-center justify-between px-4 sm:px-6">
         <a
           href="#"
-          className="font-mono text-sm tracking-tight text-foreground hover:text-accent transition-colors"
+          className="text-sm font-medium tracking-tight text-foreground hover:text-accent transition-colors"
         >
-          ship<span className="text-accent">log</span>
-          <span className="text-muted"> / {site.name.split(" ")[0].toLowerCase()}</span>
+          {site.name}
         </a>
 
         <nav className="hidden items-center gap-6 md:flex">

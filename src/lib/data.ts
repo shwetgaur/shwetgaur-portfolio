@@ -169,11 +169,3 @@ export const skills = [
   "Streamlit",
   "LangSmith",
 ];
-
-export const pipelineSteps = [
-  "Input",
-  "Retrieve",
-  "Agent",
-  "Eval",
-  "Deploy",
-];

@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     description:
       "I ship LangGraph agents, RAG, and production APIs — with live demos and evidence.",
     type: "website",
-    siteName: "Ship Log · Shwet Gaur",
+    siteName: "Shwet Gaur",
   },
   twitter: {
     card: "summary_large_image",
