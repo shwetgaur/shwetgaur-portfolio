@@ -2,6 +2,8 @@
 
 Personal portfolio site: **AI/ML engineer**, live demos, run-card project layout.
 
+**Repo:** [github.com/shwetgaur/shwetgaur-portfolio](https://github.com/shwetgaur/shwetgaur-portfolio)
+
 ## Stack
 
 - Next.js 16 (App Router)
@@ -18,17 +20,17 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000)
 
-## Deploy to Vercel
+## Deploy to Vercel (one click)
 
-1. Push this folder to GitHub (`shwetgaur/shwetgaur-portfolio`)
-2. Import repo at [vercel.com/new](https://vercel.com/new)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fshwetgaur%2Fshwetgaur-portfolio&project-name=shwetgaur-portfolio&repository-name=shwetgaur-portfolio)
+
+Or import manually:
+
+1. Go to [vercel.com/new](https://vercel.com/new)
+2. Import `shwetgaur/shwetgaur-portfolio`
 3. Deploy — zero config
 
-Or CLI:
-
-```bash
-npx vercel
-```
+After deploy, update `metadataBase` in `src/app/layout.tsx` to your live URL (e.g. `https://your-name.vercel.app`).
 
 ## Customize
 
