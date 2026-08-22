@@ -30,8 +30,9 @@ export const site = {
   email: "shwetgaur9@gmail.com",
   github: "https://github.com/shwetgaur",
   linkedin: "https://www.linkedin.com/in/shwet-gaur-732682285/",
-  /** Replace with your public resume PDF on Google Drive */
-  resumeUrl: "",
+  /** PDF in /public — replace file to update resume */
+  resumeUrl: "/resume.pdf",
+  resumeDownloadName: "Shwet_Gaur_Resume.pdf",
 };
 
 export const liveStrip = [

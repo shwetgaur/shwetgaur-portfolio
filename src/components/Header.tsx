@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { site } from "@/lib/data";
+import { ResumeLink } from "@/components/ResumeLink";
 
 const links = [
   { href: "#work", label: "Work" },
@@ -34,6 +35,10 @@ export function Header() {
               {l.label}
             </a>
           ))}
+          <ResumeLink
+            className="rounded-md border border-border px-3 py-1.5 text-sm text-foreground hover:border-accent hover:text-accent transition-colors inline-flex items-center gap-1.5"
+            showIcon={false}
+          />
           <a
             href={site.github}
             target="_blank"
@@ -67,6 +72,14 @@ export function Header() {
                 {l.label}
               </a>
             ))}
+            <div onClick={() => setOpen(false)}>
+              <ResumeLink
+                className="text-sm text-accent inline-block"
+                showIcon={false}
+              >
+                Resume →
+              </ResumeLink>
+            </div>
             <a
               href={site.github}
               target="_blank"

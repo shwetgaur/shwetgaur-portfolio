@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Mail } from "lucide-react";
 import { GitHubIcon, LinkedInIcon } from "@/components/BrandIcons";
+import { ResumeLink } from "@/components/ResumeLink";
 import { site } from "@/lib/data";
 
 export function Contact() {
@@ -33,6 +34,11 @@ export function Contact() {
               <Mail size={18} />
               {site.email}
             </a>
+            <ResumeLink
+              className="inline-flex items-center justify-center gap-2 rounded-lg border border-border px-6 py-3 text-sm hover:border-accent/50 hover:text-accent transition-colors"
+            >
+              Download resume
+            </ResumeLink>
             <a
               href={site.linkedin}
               target="_blank"

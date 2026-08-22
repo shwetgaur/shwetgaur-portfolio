@@ -1,8 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowDown, ExternalLink, FileDown } from "lucide-react";
+import { ArrowDown, ExternalLink } from "lucide-react";
 import { GitHubIcon } from "@/components/BrandIcons";
+import { ResumeLink } from "@/components/ResumeLink";
 import { liveStrip, site } from "@/lib/data";
 
 export function Hero() {
@@ -78,17 +79,9 @@ export function Hero() {
             GitHub
             <GitHubIcon size={16} />
           </a>
-          {site.resumeUrl && (
-            <a
-              href={site.resumeUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-lg border border-border px-5 py-2.5 text-sm hover:border-accent/50 hover:text-accent transition-colors"
-            >
-              Resume
-              <FileDown size={16} />
-            </a>
-          )}
+          <ResumeLink
+            className="inline-flex items-center gap-2 rounded-lg border border-border px-5 py-2.5 text-sm hover:border-accent/50 hover:text-accent transition-colors"
+          />
         </motion.div>
 
         {/* Live strip */}

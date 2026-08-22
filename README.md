@@ -35,8 +35,14 @@ npx vercel --prod
 Edit **`src/lib/data.ts`** for:
 
 - Projects, links, experience, skills
-- `site.resumeUrl` — paste your Google Drive resume PDF link
+- `site.resumeUrl` — resume PDF path (default `/resume.pdf` in `public/`)
 - Email / social URLs
+
+### Update resume
+
+1. Export your latest resume as PDF
+2. Save it as `public/resume.pdf` (overwrite the old file)
+3. Run `npx vercel --prod` to publish
 
 ## Project structure
 
