@@ -39,7 +39,12 @@ export const liveStrip = [
   {
     label: "SHL Recommender",
     status: "live" as const,
-    href: "https://shwetgaur-shl-recommender.hf.space",
+    href: "https://shl-conversational-assessment-recommender.onrender.com",
+  },
+  {
+    label: "PolicyPilot",
+    status: "live" as const,
+    href: "https://hackrx-llm-retriever-1.onrender.com",
   },
   {
     label: "Campus Voice",
@@ -80,7 +85,7 @@ export const projects: Project[] = [
     ],
     status: "live",
     statusLabel: "LIVE",
-    liveUrl: "https://shwetgaur-shl-recommender.hf.space",
+    liveUrl: "https://shl-conversational-assessment-recommender.onrender.com",
     githubUrl: "https://github.com/shwetgaur/shl-ai-recommender",
   },
   {
@@ -127,7 +132,7 @@ export const projects: Project[] = [
     ],
     status: "live",
     statusLabel: "LIVE",
-    liveUrl: "https://shwetgaur-policy-pilot.hf.space",
+    liveUrl: "https://hackrx-llm-retriever-1.onrender.com",
     githubUrl: "https://github.com/shwetgaur/hackrx-llm-retriever",
   },
 ];
