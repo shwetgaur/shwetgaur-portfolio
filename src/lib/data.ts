@@ -49,7 +49,7 @@ export const liveStrip = [
   {
     label: "PayRecover",
     status: "live" as const,
-    href: "https://payrecover.vercel.app",
+    href: "https://payrecover-lac.vercel.app",
   },
   {
     label: "Campus Voice",
@@ -153,7 +153,7 @@ export const projects: Project[] = [
     ],
     status: "live",
     statusLabel: "LIVE",
-    liveUrl: "https://payrecover.vercel.app",
+    liveUrl: "https://payrecover-lac.vercel.app",
     githubUrl: "https://github.com/shwetgaur/payrecover",
   },
 ];
