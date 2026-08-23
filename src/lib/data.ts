@@ -125,8 +125,9 @@ export const projects: Project[] = [
       "~25% latency reduction (40s → under 30s)",
       "Hypothesis-driven retrieval experiments",
     ],
-    status: "shipped",
-    statusLabel: "SHIPPED",
+    status: "live",
+    statusLabel: "LIVE",
+    liveUrl: "https://shwetgaur-hackkrx.hf.space",
     githubUrl: "https://github.com/shwetgaur/hackrx-llm-retriever",
   },
 ];
