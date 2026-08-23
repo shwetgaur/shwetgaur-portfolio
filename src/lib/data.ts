@@ -39,7 +39,7 @@ export const liveStrip = [
   {
     label: "SHL Recommender",
     status: "live" as const,
-    href: "https://shl-conversational-assessment-recommender.onrender.com",
+    href: "https://shl-recommender-xffs.onrender.com",
   },
   {
     label: "PolicyPilot",
@@ -90,7 +90,7 @@ export const projects: Project[] = [
     ],
     status: "live",
     statusLabel: "LIVE",
-    liveUrl: "https://shl-conversational-assessment-recommender.onrender.com",
+    liveUrl: "https://shl-recommender-xffs.onrender.com",
     githubUrl: "https://github.com/shwetgaur/shl-ai-recommender",
   },
   {
