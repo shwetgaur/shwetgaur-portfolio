@@ -47,6 +47,11 @@ export const liveStrip = [
     href: "https://hackrx-llm-retriever-1.onrender.com",
   },
   {
+    label: "PayRecover",
+    status: "live" as const,
+    href: "https://payrecover.vercel.app",
+  },
+  {
     label: "Campus Voice",
     status: "live" as const,
     href: "https://fs-blind.vercel.app",
@@ -134,6 +139,22 @@ export const projects: Project[] = [
     statusLabel: "LIVE",
     liveUrl: "https://hackrx-llm-retriever-1.onrender.com",
     githubUrl: "https://github.com/shwetgaur/hackrx-llm-retriever",
+  },
+  {
+    id: "payrecover",
+    runId: "005",
+    title: "PayRecover",
+    subtitle: "Razorpay AI Buildathon · Track 03 Revenue Recovery",
+    stack: ["Python", "LangGraph", "FastAPI", "Groq", "Next.js"],
+    highlights: [
+      "LangGraph agent: diagnose → policy gate → plan → act → audit",
+      "50/50 gold-batch classification; 0 policy violations",
+      "Groq rationale + rule fallback; Vercel console + Render API",
+    ],
+    status: "live",
+    statusLabel: "LIVE",
+    liveUrl: "https://payrecover.vercel.app",
+    githubUrl: "https://github.com/shwetgaur/payrecover",
   },
 ];
 
