@@ -127,7 +127,7 @@ export const projects: Project[] = [
     ],
     status: "live",
     statusLabel: "LIVE",
-    liveUrl: "https://shwetgaur-hackkrx.hf.space",
+    liveUrl: "https://shwetgaur-policy-pilot.hf.space",
     githubUrl: "https://github.com/shwetgaur/hackrx-llm-retriever",
   },
 ];
