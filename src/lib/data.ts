@@ -52,6 +52,11 @@ export const liveStrip = [
     href: "https://payrecover-lac.vercel.app",
   },
   {
+    label: "Fault Localization",
+    status: "live" as const,
+    href: "https://propel-fault-localization.onrender.com",
+  },
+  {
     label: "Campus Voice",
     status: "live" as const,
     href: "https://fs-blind.vercel.app",
@@ -155,6 +160,22 @@ export const projects: Project[] = [
     statusLabel: "LIVE",
     liveUrl: "https://payrecover-lac.vercel.app",
     githubUrl: "https://github.com/shwetgaur/payrecover",
+  },
+  {
+    id: "fault-localization",
+    runId: "006",
+    title: "KSPDB Fault Localization",
+    subtitle: "Propel.ai · Grid outage control room",
+    stack: ["Python", "FastAPI", "React", "Leaflet", "Docker"],
+    highlights: [
+      "Live/dark telemetry → located outage tickets with map + PIN",
+      "Span, DT, and sensor-failure classification on 3,200-pole network",
+      "Auto-verifies restoration from telemetry; AI dispatch briefs",
+    ],
+    status: "live",
+    statusLabel: "LIVE",
+    liveUrl: "https://propel-fault-localization.onrender.com",
+    githubUrl: "https://github.com/shwetgaur/propel-ai-fault-localization",
   },
 ];
 
