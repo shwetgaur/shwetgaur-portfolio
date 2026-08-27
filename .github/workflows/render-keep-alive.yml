@@ -1,0 +1,45 @@
+name: Render keep-alive
+
+on:
+  schedule:
+    # Render free tier sleeps after ~15 min idle. GitHub cron is often delayed, so ping
+    # every 5 min (not 14) and avoid :00 to reduce queue backlog at the top of the hour.
+    - cron: "3,8,13,18,23,28,33,38,43,48,53,58 * * * *"
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Wake all Render services
+        run: |
+          URLS=(
+            "https://shl-recommender-xffs.onrender.com/health"
+            "https://hackrx-llm-retriever-1.onrender.com/health"
+            "https://payrecover-api.onrender.com/health"
+            "https://propel-fault-localization.onrender.com/api/health"
+          )
+          for url in "${URLS[@]}"; do
+            curl -sS -o /dev/null --connect-timeout 10 --max-time 20 "$url" || true &
+          done
+          wait
+
+      - name: Wait for cold starts to finish
+        run: sleep 90
+
+      - name: Confirm services respond
+        run: |
+          URLS=(
+            "https://shl-recommender-xffs.onrender.com/health"
+            "https://hackrx-llm-retriever-1.onrender.com/health"
+            "https://payrecover-api.onrender.com/health"
+            "https://propel-fault-localization.onrender.com/api/health"
+          )
+          for url in "${URLS[@]}"; do
+            if curl -fsS --connect-timeout 15 --max-time 180 --retry 2 --retry-delay 25 "$url"; then
+              echo "OK: $url"
+            else
+              echo "WARN: $url did not respond (will retry on next schedule)"
+            fi
+          done
